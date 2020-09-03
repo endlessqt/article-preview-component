@@ -11,6 +11,9 @@ module.exports = {
         lightblue: "var(--lightblue)",
         lightdarkblue: "var(--lightdarkblue)",
       },
+      variants: {
+        fill: ["responsive", "hover", "focus"],
+      },
     },
   },
   variants: {},

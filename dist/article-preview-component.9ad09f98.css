@@ -19010,6 +19010,12 @@ video {
   animation: bounce 1s infinite;
 }
 
+.share:hover path {
+  fill: #fff;
+}
+
+/*TODO POPUP */
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

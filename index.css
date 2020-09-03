@@ -13,3 +13,8 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.share:hover path {
+  fill: #fff;
+}
+/*TODO POPUP */

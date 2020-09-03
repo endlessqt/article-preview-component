@@ -23,23 +23,30 @@
   <body class="bg-lightdarkblue h-screen">
     <main class="container mx-auto h-full sm:px-0 md:px-4">
       <div class="flex flex-col justify-center items-center h-full">
-        <div class="flex-grow flex-shrink-0 flex justify-center items-center max-w-5xl">
-          <div class="bg-white flex flex-row rounded-lg overflow-hidden shadow-lg md:mx-10 mx-5">
-            <img src="/drawers.b3e5a57b.jpg" alt="drawers" class="w-2/5 object-cover">
+        <div class="flex-grow flex-shrink-0 flex justify-center items-center max-w-4xl">
+          <div class="bg-white flex flex-row rounded-lg shadow-lg sm:mx-3 md:mx-5 lg:mx-10">
+            <img src="/drawers.b3e5a57b.jpg" alt="drawers" class="w-2/5 object-cover object-left flex-none rounded-l-lg">
 
-            <div class="px-12 py-10 flex flex-col justify-between">
-              <div class="pr-4 text-left">
-                <h1 class="font-bold text-xl text-dark">
+            <div class="px-10 py-8 flex flex-col flex-1 space-y-5">
+              <div class="pr-4 text-left space-y-4">
+                <h1 class="font-bold text-2xl text-dark leading-snug">
                   Shift the overall look and feel by adding theese wonderful
                   touches to furniture in your home
                 </h1>
-                <p class="text-lightdark font-medium">
+                <p class="block relative text-lightdark font-medium text-sm leading-relaxed tracking-wide">
                   Ever been in a room and felt like something was missing?
                   Perhaps it felt sligtly bare and uninviting. I've got some
                   simple tips to help you make any room feel complete.
                 </p>
               </div>
-              <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center flex-wrap relative">
+                <div class="absolute top-0 right-0 bg-dark flex">
+                  SHARE
+                  <img src="/icon-facebook.db88fd38.svg">
+                  <img src="/icon-twitter.9dcd00ee.svg">
+                  <img src="/icon-pinterest.6b47e241.svg">
+                </div>
+
                 <div class="flex flex-shrink-0">
                   <img src="/avatar-michelle.ab26371a.jpg" class="rounded-full w-12">
                   <div class="flex flex-col ml-5 justify-center text-sm leading-relaxed tracking-wide">
@@ -49,9 +56,16 @@
                     <p class="text-lightblue font-medium">28 Jun 2020</p>
                   </div>
                 </div>
-                <button class="bg-lightdarkblue w-8 h-8 rounded-full flex justify-center items-center cursor-pointer flex-shrink-0 focus:shadow-outline focus:outline-none">
-                  <img src="/icon-share.d0d9fb83.svg">
-                </button>
+                <div class="">
+                  <button class="share bg-lightdarkblue h-8 w-8 rounded-full flex justify-center items-center cursor-pointer flex-shrink-0 focus:shadow-outline focus:outline-none hover:bg-lightdark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                      <path fill="#6E8098" d="M15
+                      6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0
+                      10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39
+                      9.11h.375v3.867L15 6.495z"></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
