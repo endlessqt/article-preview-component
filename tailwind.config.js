@@ -14,6 +14,14 @@ module.exports = {
       variants: {
         fill: ["responsive", "hover", "focus"],
       },
+      spacing: {
+        13: "3.25rem",
+        14: "3.5rem",
+        28: "7rem",
+      },
+      letterSpacing: {
+        popup: "0.3rem",
+      },
     },
   },
   variants: {},

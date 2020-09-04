@@ -10,6 +10,27 @@
   font-family: "Manrope";
   src: url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 }
+.popup-desktop {
+  visibility: hidden;
+  opacity: 0;
+  transform: opacity 1s;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-desktop::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 13px solid;
+  @apply border-dark;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  transform: translateY(13px);
+}
 @tailwind components;
 
 @tailwind utilities;
@@ -17,4 +38,6 @@
 .share:hover path {
   fill: #fff;
 }
-/*TODO POPUP */
+.share:focus path {
+  fill: #fff;
+}
