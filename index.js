@@ -1,13 +1,29 @@
 const buttonShare = document.querySelector(".share");
 const popupDesktop = document.querySelector(".popup-desktop");
 const socialButtons = document.querySelectorAll(".popup-desktop button");
+const bottomSect = document.querySelector(".bottom-sect");
 
 buttonShare.addEventListener("click", () => {
   popupDesktop.classList.toggle("show");
+  if (window.matchMedia("(max-width: 640px)").matches) {
+    popupDesktop.classList.add("no-after");
+  } else {
+    popupDesktop.classList.remove("no-after");
+  }
+  if (window.matchMedia("(max-width: 640px)").matches) {
+    bottomSect.classList.add("no-padding");
+  } else {
+    bottomSect.classList.remove("no-padding");
+    bottomSect.classList.add("yes-padding");
+  }
 });
 socialButtons.forEach((button) => {
   button.addEventListener("click", () => {
     popupDesktop.classList.toggle("show");
+    if (!popupDesktop.classList.contains("show")) {
+      bottomSect.classList.remove("no-padding");
+      bottomSect.classList.add("yes-padding");
+    }
   });
 });
 //remove popup on click non on popup\button\share-button
@@ -20,5 +36,9 @@ document.addEventListener("click", (e) => {
     )
   ) {
     popupDesktop.classList.remove("show");
+    if (!popupDesktop.classList.contains("show")) {
+      bottomSect.classList.remove("no-padding");
+      bottomSect.classList.add("yes-padding");
+    }
   }
 });

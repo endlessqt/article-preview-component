@@ -121,18 +121,42 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var buttonShare = document.querySelector(".share");
 var popupDesktop = document.querySelector(".popup-desktop");
 var socialButtons = document.querySelectorAll(".popup-desktop button");
+var bottomSect = document.querySelector(".bottom-sect");
 buttonShare.addEventListener("click", function () {
   popupDesktop.classList.toggle("show");
+
+  if (window.matchMedia("(max-width: 640px)").matches) {
+    popupDesktop.classList.add("no-after");
+  } else {
+    popupDesktop.classList.remove("no-after");
+  }
+
+  if (window.matchMedia("(max-width: 640px)").matches) {
+    bottomSect.classList.add("no-padding");
+  } else {
+    bottomSect.classList.remove("no-padding");
+    bottomSect.classList.add("yes-padding");
+  }
 });
 socialButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     popupDesktop.classList.toggle("show");
+
+    if (!popupDesktop.classList.contains("show")) {
+      bottomSect.classList.remove("no-padding");
+      bottomSect.classList.add("yes-padding");
+    }
   });
 }); //remove popup on click non on popup\button\share-button
 
 document.addEventListener("click", function (e) {
   if (!(e.target.closest("button") === buttonShare || e.target.closest(".popup-desktop") || e.target.closest(".popup-desktop button"))) {
     popupDesktop.classList.remove("show");
+
+    if (!popupDesktop.classList.contains("show")) {
+      bottomSect.classList.remove("no-padding");
+      bottomSect.classList.add("yes-padding");
+    }
   }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -163,7 +187,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61308" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55167" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

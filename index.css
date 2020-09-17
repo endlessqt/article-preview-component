@@ -19,17 +19,16 @@
   visibility: visible;
   opacity: 1;
 }
-.popup-desktop::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-top: 13px solid;
-  @apply border-dark;
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-  transform: translateY(13px);
+.no-padding {
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.yes-padding {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @tailwind components;
 
@@ -40,4 +39,20 @@
 }
 .share:focus path {
   fill: #fff;
+}
+.popup-desktop.no-after::after {
+  content: none;
+}
+
+.popup-desktop::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 14px solid;
+  @apply border-dark;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  transform: translateY(12px);
 }
