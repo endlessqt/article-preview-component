@@ -605,13 +605,7 @@ video {
   padding-bottom: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-.yes-padding {
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: 1rem !important;
 }
 
 .container {

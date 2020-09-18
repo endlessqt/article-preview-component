@@ -135,7 +135,6 @@ buttonShare.addEventListener("click", function () {
     bottomSect.classList.add("no-padding");
   } else {
     bottomSect.classList.remove("no-padding");
-    bottomSect.classList.add("yes-padding");
   }
 });
 socialButtons.forEach(function (button) {
@@ -144,7 +143,6 @@ socialButtons.forEach(function (button) {
 
     if (!popupDesktop.classList.contains("show")) {
       bottomSect.classList.remove("no-padding");
-      bottomSect.classList.add("yes-padding");
     }
   });
 }); //remove popup on click non on popup\button\share-button
@@ -155,8 +153,13 @@ document.addEventListener("click", function (e) {
 
     if (!popupDesktop.classList.contains("show")) {
       bottomSect.classList.remove("no-padding");
-      bottomSect.classList.add("yes-padding");
     }
+  }
+});
+window.addEventListener("resize", function () {
+  if (popupDesktop.classList.contains("show") && window.matchMedia("(min-width: 640px)").matches) {
+    bottomSect.classList.remove("no-padding");
+    popupDesktop.classList.remove("no-after");
   }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -187,7 +190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55167" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50125" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

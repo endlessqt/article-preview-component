@@ -14,7 +14,6 @@ buttonShare.addEventListener("click", () => {
     bottomSect.classList.add("no-padding");
   } else {
     bottomSect.classList.remove("no-padding");
-    bottomSect.classList.add("yes-padding");
   }
 });
 socialButtons.forEach((button) => {
@@ -22,7 +21,6 @@ socialButtons.forEach((button) => {
     popupDesktop.classList.toggle("show");
     if (!popupDesktop.classList.contains("show")) {
       bottomSect.classList.remove("no-padding");
-      bottomSect.classList.add("yes-padding");
     }
   });
 });
@@ -38,7 +36,16 @@ document.addEventListener("click", (e) => {
     popupDesktop.classList.remove("show");
     if (!popupDesktop.classList.contains("show")) {
       bottomSect.classList.remove("no-padding");
-      bottomSect.classList.add("yes-padding");
     }
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (
+    popupDesktop.classList.contains("show") &&
+    window.matchMedia("(min-width: 640px)").matches
+  ) {
+    bottomSect.classList.remove("no-padding");
+    popupDesktop.classList.remove("no-after");
   }
 });
