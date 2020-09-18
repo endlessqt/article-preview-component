@@ -2,7 +2,7 @@
 
 ## Project hosted on Surge
 
-cool-nest.surge.sh
+[cool-nest.surge.sh]
 
 ### Technologies Used:
 
