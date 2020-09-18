@@ -1,10 +1,8 @@
 # Frontend Mentor - Article preview component
 
-## Project hosted on Surge
+[Hosted on surge](cool-nest.surge.sh)
 
-[cool-nest.surge.sh]
-
-### Technologies Used:
+## Technologies Used:
 
 - HTML
 - TailwindCSS
